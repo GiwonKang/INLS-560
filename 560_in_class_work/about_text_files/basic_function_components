@@ -1,0 +1,6 @@
+def message () :
+    """Display a simple message""" #docstring multi-line comment
+    print('I am Arthur')
+    print('King of the Britons')
+
+message()

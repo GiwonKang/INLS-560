@@ -1,0 +1,7 @@
+def message (king_name) :
+    """Display a message with parameter""" #docstring multi-line comment
+    print('I am', king_name)
+    print('King of the Britons')
+
+#Call the message function
+message('Henry VIII')

@@ -1,0 +1,7 @@
+def message (king_name, kingdom = 'Egypt') :
+    """Display default value""" #docstring multi-line comment
+    print('I am', king_name)
+    print('King of', kingdom)
+
+#Call the message function
+message('Tut')
