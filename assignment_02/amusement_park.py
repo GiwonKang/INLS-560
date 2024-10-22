@@ -1,4 +1,4 @@
-# This lesson covers that order matters when using elif in some situation
+# This lesson covers that order matters when using elif in some situation.
 age = 101
 
 if age < 4:
