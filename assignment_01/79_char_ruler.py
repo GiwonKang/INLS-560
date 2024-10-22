@@ -1,5 +1,5 @@
 # Kang, Giwon
-# This is a screenshot of the 79 char ruler.
+# This is a screenshot of the 79 char ruler. This is a new comment.
 
 # Max Character is 79
 max_char=79
