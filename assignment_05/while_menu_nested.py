@@ -8,7 +8,7 @@ while menu_option != 'q':
     print(f'''
     MENU:
     a: cut and shampoo for hairs
-    b: receive consultation on hair dying and perming
+    b: receive consultation on hair dying or perming
     q: exit
     ''')
 
@@ -20,7 +20,7 @@ while menu_option != 'q':
         print('We will help you cut and shampoo your hair today.\n')
     # Else, if menu_option is 'b', prints an input statement asking if the user want to receive a consultation on hair dying and perming as well 
     elif menu_option == 'b':
-        additional_option = input('Do you want to receive a consultation on hair dying and perming? Enter y or n: ')
+        additional_option = input('Do you want to receive a consultation on hair dying or perming? Enter y or n: ')
         # Response if user's answer is 'y'
         if menu_option == 'y':
             print('Awesome! It would be great to consider dying or perming on vacation!\n')

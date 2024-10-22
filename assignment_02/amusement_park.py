@@ -13,7 +13,7 @@ elif age > 100:
 elif age > 60:    
     print("Admission is $35.")
 
-# This is not oging to work here. Put before age 60.
+# This is not oging to work here. Put before age 60.(sixty)
 #elif age > 100:
 #    print("Admission is $0 and you get a free beer!")
 
