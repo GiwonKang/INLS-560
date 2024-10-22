@@ -12,6 +12,7 @@ while menu_option != 'q':
     q: exit
     ''')
 
+    # Allows user to input a menu options, sets menu_option variable equal to user input
     menu_option = input('Enter your service choice today: ')  # Take input as string
     
     if menu_option == 'a':
