@@ -1,0 +1,14 @@
+string = 'string'
+
+print(string[0])
+print(string[3])
+print(string[2:])    # same as [2:6]
+print(string[:3])
+print(string[1:4])   # same as [0:3]
+print(string[1:6:2])
+#Above same as the slide example. Go back and confirm if needed.
+
+#below do some more practice:
+
+# print only s and g using start, stop and step:
+print(string[ : : ])

@@ -1,0 +1,7 @@
+print('Output start position and remaining characters:')
+print("hello"[0:]) # 0 and remaining
+print("hello"[1:]) # 1 and remaining
+print("hello"[2:]) # 2 and remaining
+print("hello"[3:]) # and so on...
+print("hello"[4:])
+print("hello"[5:])

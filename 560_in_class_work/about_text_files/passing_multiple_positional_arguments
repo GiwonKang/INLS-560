@@ -1,0 +1,7 @@
+def message (king_name, kingdom) :
+    """Display positional arguments""" #docstring multi-line comment
+    print('I am', king_name)
+    print('King of the', kingdom)
+
+#Call the message function
+message('Mufasa', 'Lions')
