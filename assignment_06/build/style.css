@@ -1,0 +1,39 @@
+
+    /* Applies a universal style reset to remove default margin and padding from all elements,
+   sets border-box for consistent box sizing, and changes the font across the site */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Calibri;
+    }
+    /* Styles the background color for the entire page */
+    body {
+        background-color: #7BAFD4;
+    }
+    /* Styles the navigation bar with a dark blue background and padding for spacing */
+    nav {
+        background-color: #13294B;
+        padding: 10px;
+    }
+    /* Styles links within the navigation bar:
+   sets the link color to a lighter blue, adds spacing, and removes underline */
+    nav a {
+        color: #4B9CD3;
+        margin-right: 10px;
+        text-decoration: none;
+    }
+    /* Styles the active link in the navigation bar:
+   sets the color to white and makes the font bold for emphasis */
+    nav a.active {
+        color: #ffffff;
+        font-weight: bold;
+    }
+    /* Styles the main content area:
+   sets a light background color, adds padding for spacing, and margin for separation */
+    .content {
+        background-color: #F8F8F8;
+        padding: 20px;
+        margin: 20px;
+    }
+    
