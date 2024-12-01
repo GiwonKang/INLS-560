@@ -73,7 +73,6 @@ class Game:
                self.snake.update()
                self.check_collision_with_food()    # added for eating
                self.check_collision_with_edges()
-               self.check_collision_with_tail()
     
     def check_collision_with_food(self):
           if self.snake.body[0] == self.food.position: # added for eating, self.snake.body[0] = head
@@ -91,11 +90,6 @@ class Game:
          self.snake.reset()
          self.food.position = self.food.generate_random_pos(self.snake.body)
          print("STOPPED")
-    
-    def check_collision_with_tail(self):
-         headless_body = self.snake.body[1:]
-         if self.snake.body[0] in headless_body:
-              self.game_over()
 
 screen = pygame.display.set_mode((cell_size * number_of_cells, cell_size * number_of_cells))
 
@@ -125,8 +119,6 @@ while True:
             sys.exit()
         
         if event.type == pygame.KEYDOWN:
-            if game.state == "STOPPED":
-                 game.state = "RUNNING"
             if event.key == pygame.K_UP and game.snake.direction != Vector2(0, 1):    # added game
                   game.snake.direction = Vector2(0, -1)   # added game.
             if event.key == pygame.K_DOWN and game.snake.direction != Vector2(0, -1):
@@ -144,4 +136,4 @@ while True:
     pygame.display.update()
     clock.tick(60)
 
-    
+    # Now when game over, the game will reset.

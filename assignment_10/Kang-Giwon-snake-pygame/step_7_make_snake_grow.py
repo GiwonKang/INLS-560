@@ -54,48 +54,24 @@ class Snake:
          else:
               self.body = self.body[:-1] # : slicing that cells
 
-    def reset(self):
-         self.body = [Vector2(6,9), Vector2(5,9), Vector2(4,9)]
-         self.direction = Vector2(1, 0)
-
 class Game:
     def __init__(self):
          self.snake = Snake()
          self.food = Food(self.snake.body)
-         self.state = "RUNNING"
     
     def draw(self):
          self.food.draw()
          self.snake.draw()
     
     def update(self):
-         if self.state == "RUNNING":
-               self.snake.update()
-               self.check_collision_with_food()    # added for eating
-               self.check_collision_with_edges()
-               self.check_collision_with_tail()
+         self.snake.update()
+         self.check_collision_with_food()    # added for eating
     
     def check_collision_with_food(self):
           if self.snake.body[0] == self.food.position: # added for eating, self.snake.body[0] = head
                self.food.position = self.food.generate_random_pos(self.snake.body) # deleted test pinrt("Eating food")
                self.snake.add_segment = True
                # print("Eating food")                    # added for testing
-     
-    def check_collision_with_edges(self):
-         if self.snake.body[0].x == number_of_cells or self.snake.body[0].x == -1:
-              self.game_over()
-         if self.snake.body[0].y == number_of_cells or self.snake.body[0].y == -1:
-              self.game_over()
-     
-    def game_over(self):
-         self.snake.reset()
-         self.food.position = self.food.generate_random_pos(self.snake.body)
-         print("STOPPED")
-    
-    def check_collision_with_tail(self):
-         headless_body = self.snake.body[1:]
-         if self.snake.body[0] in headless_body:
-              self.game_over()
 
 screen = pygame.display.set_mode((cell_size * number_of_cells, cell_size * number_of_cells))
 
@@ -125,8 +101,6 @@ while True:
             sys.exit()
         
         if event.type == pygame.KEYDOWN:
-            if game.state == "STOPPED":
-                 game.state = "RUNNING"
             if event.key == pygame.K_UP and game.snake.direction != Vector2(0, 1):    # added game
                   game.snake.direction = Vector2(0, -1)   # added game.
             if event.key == pygame.K_DOWN and game.snake.direction != Vector2(0, -1):
@@ -144,4 +118,4 @@ while True:
     pygame.display.update()
     clock.tick(60)
 
-    
+    # Now everytime the snake eats, the body grows by one sement.

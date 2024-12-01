@@ -21,6 +21,7 @@ while True:
     else:
         print('Invalid option. Please select a,v, or x.')
         continue
+    
     # enter a search term this // is a global variable
     search_variable = input(f'Enter the search term for {file_variable} file: ')
     search_variable = search_variable.title() # Make it so that the user can enter lower-case term.
