@@ -28,7 +28,7 @@ pygame.display.set_caption("560 Snake Game") # this is retro snake in the video
 clock = pygame.time.Clock() # controls the frame rate of the game
 
 food = Food() # call the added function
-food_surface = pygame.image.load("Kang-Giwon-snake-pygame/graphics/food.png")
+food_surface = pygame.image.load("graphics/food.png")
 
 # Game Loop
 while True:
