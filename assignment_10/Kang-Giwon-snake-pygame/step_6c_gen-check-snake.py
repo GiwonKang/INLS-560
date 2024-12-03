@@ -80,7 +80,7 @@ clock = pygame.time.Clock() # controls the frame rate of the game
 game = Game() # comment food = Food() and snake = Snake()
 # food = Food() # call the added function
 # snake = Snake()
-food_surface = pygame.image.load("Kang-Giwon-snake-pygame/graphics/food.png")
+food_surface = pygame.image.load("graphics/food.png")
 
 SNAKE_UPDATE = pygame.USEREVENT # Added to make snake go slower
 pygame.time.set_timer(SNAKE_UPDATE, 200) # Snake moving very fast
